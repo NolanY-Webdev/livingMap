@@ -4,10 +4,10 @@ var express = require('express');
 
 var app = express();
 var port = process.env.PORT || 3000;
-var questions = require('./routes/faq')
+var questions = require('./routes/faq');
 
 app.use(express.static('./public'));
-
+app.use('/FAQ', questions);
 
 
 app.listen(port, function() {
